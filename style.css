@@ -1,0 +1,38 @@
+.a1{
+    font-size: 56px;
+    font-family: 'Lexend', sans-serif;
+    margin-top: -800px;
+    color: rgb(252, 252, 252);
+    margin-left: 310px;
+    font-weight: lighter;
+    /* text-align: center; */
+}
+span{
+    color: black;
+    font-weight: bolder;
+}
+.a2{
+    font-size: 32px;
+    color: whitesmoke;
+    margin-left: 310px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.a3{
+    width: 320px;
+    height: 50px;
+    color: white;
+    font-size: 30px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-family: 'Lexend', sans-serif;
+    /* font-weight: bolder; */
+    border-style: none;
+    margin-left: 540px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+#error1{
+  font-size: 16px;
+  color: black;
+
+}

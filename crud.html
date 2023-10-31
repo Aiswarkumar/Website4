@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap" rel="stylesheet">
+    
+    <style>
+        .maindiv1{
+            width: 400px;
+            height: 500px;
+            background-color: #949494;
+            margin-left: 500px;
+            padding-left: 140px;
+            padding-top: 50px;
+            margin-top: 50px;
+        }
+        .p1,.p2,.p3,.p4,.p5{
+            width: 260px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            font-family: 'Lexend', sans-serif;
+            border-radius: 5px;
+            border-style: none;
+            padding-left: 10px;
+        }
+        .register{
+            width: 110px;
+            height: 30px;
+            background-color: #4d52ad;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            font-family: 'Lexend', sans-serif;
+            border-radius: 5px;
+            border-style: none;
+            margin-left: 80px;
+            padding-left: 10px;
+        }
+        .formclass{
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="maindiv1">
+        <form action="" class="formclass">
+            <input class="p1" type="text" placeholder="Enter your Name:"  id="name"> <br> <br> <br>
+            <h1 id="error1"></h1>
+            <input class="p2" type="text" placeholder="Enter your Email id:"  id="email"> <br> <br> <br>
+            <h1 id="error2"></h1>
+            <input class="p3" type="text" placeholder="Enter your Password:"  id="password"> <br> <br> <br>
+            <h1 id="error3"></h1>
+            <input class="p4" type="number" placeholder="Enter your Mobile no:"  id="mobile"> <br> <br> <br>
+            <h1 id="error4"></h1>
+            <input class="p5" type="text" placeholder="Enter your Location:"  id="location"> <br> <br> <br> <br> 
+            <h1 id="error5"></h1>
+            <button class="register">Register</button>
+
+            <ul id="todo"></ul>
+        </form>
+     </div>
+    
+     
+     <script>
+      let name1= document.getElementById("name");
+      let email1= document.getElementById("email");
+      let password1= document.getElementById("password");
+      let mobile1= document.getElementById("mobile");
+      let location1= document.getElementById("location");
+      let register1= document.getElementsByClassName("register");
+      let button1=document.getElementsByClassName("a3");
+    //   let todo1= document.getElementById("todo");
+      let firstdivi = document.querySelector(".formclass");
+      let todoul = document.querySelector(".todo");
+      let registerdivi = document.querySelector(".maindiv1");
+
+      let errormessage1 = document.getElementById("error1");
+      let errormessage2 = document.getElementById("error2");
+      let errormessage3 = document.getElementById("error3");
+      let errormessage4 = document.getElementById("error4");
+      let errormessage5 = document.getElementById("error5");
+
+
+    
+      formclass.style.display="none";
+        
+        a3.addEventListener("click", valueoutput);
+         
+        name1.addEventListener("change",op1);
+         function op1(){
+            if (name1.value=="" || name1.value=="undefined" || name1.value=="null"){
+                errormessage1.innerHTML="Please enter your name";
+                return false;
+            }
+            else{
+                errormessage1.innerHTML="";
+            }
+         }
+
+         email1.addEventListener("change",op2);
+          function op2(){
+            if (email1.value=="" || email1.value=="undefined" || email1.value=="null"){
+                errormessage2.innerHTML="Please enter your email";
+                return false;
+            }
+            else{
+                errormessage2.innerHTML="";
+            }
+          }
+
+          password1.addEventListener("change",op3);
+           function op3(){
+            if (password1.value=="" || password1.value=="undefined" || password1.value=="null"){
+                errormessage3.innerHTML="";
+                return false;
+            }
+            else{
+                errormessage3.innerHTML="";
+            }
+           }
+
+           mobile1.addEventListener("change",op4);
+            function op4(){
+                if (mobile1.value=="" || mobile1.value=="undefined" || mobile1.value== "null"){
+                    errormessage4.innerHTML="";
+                    return false;
+                }
+                else{
+                    errormessage4.innerHTML="";
+                }
+            }
+
+            location1.addEventListener("change",op5);
+             function op5(){
+                if (location1.value=="" || location1.value=="undefined" || location1.value=="null"){
+                    errormessage5.innerHTML="";
+                    return false;
+                }
+                else{
+                    errormessage5.innerHTML="";
+                }
+             }
+
+             function valueoutput(){
+                formclass.style.display="block";
+                registerdivi.style.display="none";
+             }
+
+             register1.addEventListener("click",secondvalue)
+              function secondvalue(event){
+                event.preventDefault();
+
+                if (name1.value=="" || name1.value=="undefined" || name1.value=="null"){
+                    errormessage1.innerHTML="Please enter your name";
+                    errormessage1.classList.add(q1);
+                    return false;
+                }
+                else if (email1.value=="" || email1.value=="undefined" || email1.value=="null"){
+                    errormessage2.innerHTML="Please enter your email id";
+                    errormessage2.classList.add(q1);
+                    return false;
+                }
+                else if (password1.value=="" || password1.value=="undefined" || password1.value=="null"){
+                    errormessage3.innerHTML="Please enter your password";
+                    errormessage3.classList.add(q1);
+                    return false;
+                }
+                else if (mobile1.value=="" || mobile1.value=="undefined" || mobile1.value=="null"){
+                    errormessage4.innerHTML="Please neter your mobile no.";
+                    errormessage4.classList.add(q1);
+                    return false;
+                }
+                else if (location1.value=="" || location1.value=="undefined" || location1.value=="null"){
+                    errormessage5.innerHTML="Please enter your Location";
+                    errormessage5.classList.add(q1);
+                    return false;
+                }
+                else{
+                    registerdivi.style.display="block";
+                }
+              }
+
+    
+        // function valueoutput(event){
+        //     event.preventDefault();
+    
+            let newdiv= document.createElement("div");
+            todo1.appendChild(newdiv);
+            let x1=document.createElement("input");
+            x1.value=name1.value;
+            x1.setAttribute("readonly", "readonly");
+            newdiv.appendChild(x1);
+    
+            let x2=document.createElement("input");
+            x2.value=email1.value;
+            x2.setAttribute("readonly","readonly");
+            newdiv.appendChild(x2);
+    
+            let x3=document.createElement("input");
+            x3.value= password1.value;
+            x3.setAttribute("readonly","readonly");
+            newdiv.appendChild(x3);
+    
+            let x4=document.createElement("input");
+            x4.value=mobile1.value;
+            x4.setAttribute("readonly","readonly");
+            newdiv.appendChild(x4);
+    
+            let x5=document.createElement("input");
+            x5.value= location1.value;
+            x5.setAttribute("readonly","readonly");
+            newdiv.appendChild(x5);
+    
+            let b1=document.createElement("button");
+            b1.innerHTML="Edit";
+            newdiv.appendChild(b1);
+            // b1.addEventListener("click",editfunction);
+    
+            let b2=document.createElement("button");
+            b2.innerHTML="Save";
+            newdiv.appendChild(b2);
+            // b2.addEventListener("click",savefunction);
+    
+            let b3=document.createElement("button");
+            b3.innerHTML="Delete";
+            newdiv.appendChild(b3);
+            b3.addEventListener("click",deletefunction);
+    
+            firstdivi.style.display="none";
+    
+            name1.value="";
+            email1.value="";
+            password1.value="";
+            mobile1.value="";
+            location1.value="";
+    
+    
+            b1.addEventListener("click",editfunction)
+            function editfunction() {
+                b2.style.display="block";
+                x1.type="text";
+                x1.removeAttribute("readonly","readonly");
+                newdiv.appendChild(x1.value);
+
+                x2.removeAttribute("readonly","readonly");
+                newdiv.appendChild(x2.value);
+
+                x3.removeAttribute("readonly","readonly");
+                newdiv.appendChild(x3.value);
+
+                x4.removeAttribute("readonly","readonly");
+                newdiv.appendChild(x4.value);
+
+                x5.removeAttribute("readonly","readonly");
+                newdiv.appendChild(x5.value);
+
+                newdiv.appendChild(b1);
+                newdiv.appendChild(b2);
+                newdiv.appendChild(b3);
+                
+                
+                
+                
+              
+    
+            }
+
+            b2.addEventListener("click",savefunction);
+    
+             function savefunction(){
+                x1.setAttribute("readonly","readonly");
+                x2.setAttribute("readonly","readonly");
+                x3.setAttribute("readonly","readonly");
+                x4.setAttribute("readonly","readonly");
+                x5.setAttribute("readonly","readonly");
+    
+            }
+
+            b3.addEventListener("click",deletefunction);
+    
+             function deletefunction(){
+                newdiv.style.display="none";
+                
+            }
+    
+    
+    
+        
+          
+     
+     
+     </script>
+        
+</body>
+</html>
